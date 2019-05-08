@@ -1,0 +1,68 @@
+#新建文件夹
+mkdir <filename>
+#初始化ls -ah查看生产.git目录
+git init
+#提交到暂存区
+git add <file>
+#提交到仓库
+git commit -m <message>
+#查看仓库状态
+git status
+#查看文件不同
+git diff <file>
+#显示提交日志，可用于版本回退
+git log
+#查看命令记录，可用于重返未来
+git reflog
+#版本穿梭
+git reset --hard HEAD^/HEAD^^/HEAD~100/<headcode>
+#撤销修改或恢复删除的工作区文件(实质是从版本库copy回来的，删除的文件之前未提交的修改会丢失)
+#checkout 不带-- 是切换分支
+git checkout --<file>
+#把提交到暂存区的修改回退到工作区
+git rest HEAD <file>
+#删除工作区文件，提交后会删除库中文件
+git rm <file>
+git commit -m <message>
+
+#远程仓库先关配置与操作
+SSH-keygen -t rsa -C "mail@mail.com"
+#会在主目录下生产.ssh文件包含私钥id-rsa和公钥id-rsa.pub
+#copy公钥内容上GitHub粘贴公钥
+#关联仓库
+git remote add origin git@...
+#仓库为空，首次推送本地项目到git，加-u,后续不需要该参数
+git push -u origin master
+#克隆项目,支持https等多协议，但原生git最快
+git clone git@...
+
+#分支切换秒完成
+#创建并切换到分支
+git checkout -b <branch>
+#等同于
+git branch <branch>
+git checkout <branch>
+#查看分支，当前所在分支前面有*
+git branch
+#合并分支到当前分支
+git merge <branch>
+#删除分支
+git branch -d <branch>
+#查看分支图
+git log --graph
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
