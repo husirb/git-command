@@ -27,7 +27,7 @@ git rest HEAD <file>
 git rm <file>
 git commit -m <message>
 
-#远程仓库先关配置与操作
+#远程仓相关配置与操作
 SSH-keygen -t rsa -C "mail@mail.com"
 #会在主目录下生产.ssh文件包含私钥id-rsa和公钥id-rsa.pub
 #copy公钥内容上GitHub粘贴公钥
